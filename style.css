@@ -10,13 +10,13 @@ body {
   color: #fff;
 }
 
-/* HEADER */
+/* HEADER + MENU */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: #120a2a; /* fond violet/noir */
+  background: #120a2a;
   color: #fff;
 }
 .logo {
@@ -24,41 +24,10 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
 }
-.status {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.dot {
-  width: 12px;
-  height: 12px;
-  background: #00ff00;
-  border-radius: 50%;
-  display: inline-block;
-}
-.online {
-  font-size: 12px;
-  font-weight: bold;
-  color: #ccc;
-}
-.players {
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* NAVBAR */
-.navbar {
-  background: #1a0f3a;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
 .navbar ul {
   display: flex;
-  justify-content: center;
-  gap: 40px;
   list-style: none;
-  padding: 15px 0;
+  gap: 30px;
 }
 .navbar a {
   text-decoration: none;
