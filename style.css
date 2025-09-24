@@ -88,18 +88,31 @@ ul { list-style: none; }
 }
 .btn {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 12px 28px;
   border-radius: 999px;
-  background: #1b53ff;
-  color: #fff;
   font-weight: bold;
-  transition: 0.3s;
-  box-shadow: 0 0 12px rgba(27,83,255,0.5);
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #1b53ff, #4f7dff);
+  box-shadow: 0 0 12px rgba(27,83,255,0.6);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Animation au hover */
 .btn:hover {
-  background: #4f7dff;
-  transform: translateY(-2px);
+  background: linear-gradient(90deg, #4f7dff, #1b53ff);
+  box-shadow: 0 0 20px rgba(79,125,255,0.8), 0 0 40px rgba(79,125,255,0.5);
+  transform: translateY(-3px) scale(1.05);
 }
+
+/* Effet clic */
+.btn:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 0 8px rgba(27,83,255,0.6);
+}
+
 
 /* BACKGROUND HERO */
 .background-animation {
