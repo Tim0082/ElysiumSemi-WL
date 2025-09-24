@@ -13,20 +13,17 @@ ul { list-style: none; }
   width: 100%;
   background: #120a2a;
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   z-index: 100;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-.header .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 .logo {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
   color: #1b53ff;
   letter-spacing: 2px;
@@ -34,14 +31,14 @@ ul { list-style: none; }
 }
 .navbar ul {
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 .navbar a {
   font-weight: 600;
   padding: 6px 10px;
   border-radius: 6px;
   position: relative;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 .navbar a::after {
   content: "";
@@ -66,7 +63,7 @@ ul { list-style: none; }
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 80px; /* espace pour le header */
   position: relative;
   overflow: hidden;
 }
