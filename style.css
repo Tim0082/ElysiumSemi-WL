@@ -139,4 +139,39 @@ ul { list-style: none; }
   padding: 20px;
   background: #120a2a;
   color: #aaa;
+
+  /* STAFF */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+.staff-card {
+  background: #061943;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(27,83,255,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.staff-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 16px rgba(27,83,255,0.5);
+}
+.staff-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+.staff-card p {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Couleurs par rôle */
+.fondateur h3 { color: #FFD700; }     /* Or */
+.fondateur p  { color: #FFD700; }
+
+.dev h3 { color: #1b53ff; }           /* Bleu logo */
+.dev p  { color: #4f7dff; }
+
 }
