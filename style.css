@@ -1,4 +1,3 @@
-
 /* ==== BASE ==== */
 body {
   margin: 0;
@@ -20,10 +19,11 @@ main {
 h2, .section-title {
   text-align: center;
   font-size: 2em;
-  color: #1e90ff;
+  color: #1b53ff; /* bleu du logo */
   margin-bottom: 30px;
-  border-bottom: 2px solid #1e90ff;
+  border-bottom: 2px solid #1b53ff;
   padding-bottom: 5px;
+  text-shadow: 0 0 8px rgba(27, 83, 255, 0.6);
 }
 
 /* ==== INTRO ==== */
@@ -32,18 +32,19 @@ h2, .section-title {
   padding: 40px 20px;
   text-align: center;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
+  box-shadow: 0 0 25px rgba(27, 83, 255, 0.4);
   margin: 60px 0;
 }
 
 .intro-section h1 {
   font-size: 2.6em;
   margin-bottom: 20px;
-  color: #1e90ff;
+  color: #1b53ff;
+  text-shadow: 0 0 10px rgba(27, 83, 255, 0.7);
 }
 
 .intro-section .highlight {
-  background: linear-gradient(90deg, #1e90ff, #00c3ff);
+  background: linear-gradient(90deg, #1b53ff, #4f7dff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -57,16 +58,18 @@ h2, .section-title {
 .cta-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #1e90ff;
+  background-color: #1b53ff;
   color: #ffffff;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 12px rgba(27, 83, 255, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
-  background-color: #00bfff;
+  background-color: #4f7dff;
+  transform: translateY(-2px);
 }
 
 /* ==== ACCORDÉON ==== */
@@ -76,7 +79,7 @@ h2, .section-title {
 
 .accordion-item {
   background-color: #061943;
-  border: 1px solid #1e90ff;
+  border: 1px solid #1b53ff;
   border-radius: 8px;
   margin-bottom: 16px;
   overflow: hidden;
@@ -86,7 +89,7 @@ h2, .section-title {
 }
 
 .accordion-item:hover {
-  box-shadow: 0 0 8px #1e90ff55;
+  box-shadow: 0 0 10px rgba(27, 83, 255, 0.5);
 }
 
 .accordion-header {
@@ -104,7 +107,7 @@ h2, .section-title {
 
 .accordion-header:hover,
 .accordion-header.active {
-  background-color: #1e90ff;
+  background-color: #1b53ff;
 }
 
 .accordion-content {
@@ -136,7 +139,7 @@ h2, .section-title {
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(30, 144, 255, 0.3);
+  box-shadow: 0 6px 14px rgba(27, 83, 255, 0.4);
 }
 
 .card img {
@@ -146,34 +149,37 @@ h2, .section-title {
 
 .card h3 {
   margin: 10px 0;
-  color: #1e90ff;
+  color: #1b53ff;
+  text-shadow: 0 0 6px rgba(27, 83, 255, 0.5);
 }
 
 .card a {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #1e90ff;
+  background-color: #1b53ff;
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 8px rgba(27, 83, 255, 0.5);
 }
 
 .card a:hover {
-  background-color: #3faeff;
+  background-color: #4f7dff;
+  transform: translateY(-2px);
 }
 
 /* ==== COULEURS DE BALISES ==== */
 .legal-title {
   color: #2eff8f;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #003;
+  text-shadow: 0 0 5px #0f4;
 }
 
 .illegal-title {
   color: #ff4e4e;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #300;
+  text-shadow: 0 0 5px #f00;
 }
