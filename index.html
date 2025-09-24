@@ -1,27 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elysium — Serveur FiveM</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Accueil - Elysium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0f2c;
+      color: #ffffff;
+    }
+
+    .logo-floating {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 200px;
+      height: auto;
+      z-index: 10;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    main {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .intro-section {
+      background-color: #061943;
+      padding: 60px 30px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
+      margin: 60px auto;
+    }
+
+    .intro-section h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #1e90ff;
+    }
+
+    .intro-section .highlight {
+      background: linear-gradient(90deg, #1e90ff, #00c3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .intro-section p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #ffffffcc;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #1e90ff;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #00bfff;
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER AVEC MENU -->
-  <header class="topbar">
-    <div class="logo">ELYSIUM</div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#accueil">ACCUEIL</a></li>
-        <li><a href="#reglement">REGLEMENT</a></li>
-        <li><a href="#entreprises">ENTREPRISES</a></li>
-        <li><a href="#illegales">ILLEGAL</a></li>
-        <li><a href="#codepenal">CODE PENAL</a></li>
-        <li><a href="#candidature">CANDIDATURE</a></li>
-        <li><a href="#streamers">NOS STREAMERS</a></li>
-        <li><a href="#boutique">BOUTIQUE</a></li>
-      </ul>
-    </nav>
-  </header>
+
+  <!-- Header chargé dynamiquement -->
+  <div id="include-header"></div>
+
+  <main>
+    <section class="intro-section">
+      <h1>🌊 Bienvenue sur <span class="highlight">Elysium RP</span></h1>
+      <p>
+        Elysium, c’est le nouveau souffle du GTA RP français.<br>
+        Un serveur flambant neuf, récemment ouvert <strong>les joueurs sont actifs</strong> en continu ! 🔥
+      </p>
+      <p>
+        Ici, plonge dans une expérience <strong>RP 100% réaliste</strong> avec une économie <strong>semi-réaliste</strong> pensée pour durer.
+        Que tu sois flic, entrepreneur, voyou ou simple citoyen, chaque choix façonne ton histoire.
+      </p>
+      <p>
+        Rejoins une communauté active, ambitieuse et encadrée par une équipe à l’écoute.<br>
+        <strong>Ton aventure commence maintenant.</strong>
+      </p>
+      <a href="https://discord.gg/sunwave" class="cta-button" target="_blank">🚀 Rejoindre l’aventure</a>
+    </section>
+  </main>
+
+  <!-- Footer chargé dynamiquement -->
+  <div id="include-footer"></div>
+
+  <script>
+    // Include header
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-header").innerHTML = data;
+      });
+
+    // Include footer
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-footer").innerHTML = data;
+      });
+  </script>
+
 </body>
 </html>
