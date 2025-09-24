@@ -1,5 +1,5 @@
-/* ==== RESET ==== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 body {
   font-family: 'Arial', sans-serif;
   background: #0a0f2c;
@@ -8,13 +8,12 @@ body {
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
-/* ==== HEADER ==== */
+/* HEADER */
 .header {
   width: 100%;
   background: #120a2a;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   z-index: 100;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
@@ -41,25 +40,40 @@ ul { list-style: none; }
   font-weight: 600;
   padding: 6px 10px;
   border-radius: 6px;
-  transition: 0.3s;
+  position: relative;
+  transition: 0.3s ease;
 }
-.navbar a:hover,
-.navbar a.active {
-  background: rgba(27,83,255,0.15);
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -5px;
+  width: 0%; height: 2px;
+  background: #1b53ff;
+  transition: width 0.3s;
+}
+.navbar a:hover {
   color: #1b53ff;
+  transform: translateY(-2px);
+}
+.navbar a:hover::after {
+  width: 100%;
 }
 
-/* ==== HERO ==== */
+/* HERO */
 .hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 80px; /* espace à cause du header fixe */
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
 }
 .hero-content {
   max-width: 700px;
+  z-index: 2;
+  position: relative;
 }
 .hero h1 {
   font-size: 3em;
@@ -87,25 +101,10 @@ ul { list-style: none; }
 }
 .btn:hover {
   background: #4f7dff;
-
-  /* ==== HERO ==== */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 80px;
-  position: relative;
-  overflow: hidden; /* évite que le fond dépasse */
-}
-.hero-content {
-  max-width: 700px;
-  position: relative;
-  z-index: 2; /* passe au-dessus du fond animé */
+  transform: translateY(-2px);
 }
 
-/* ==== BACKGROUND ANIMATION ==== */
+/* BACKGROUND HERO */
 .background-animation {
   position: absolute;
   top: 0; left: 0;
@@ -117,12 +116,30 @@ ul { list-style: none; }
   opacity: 0.5;
   filter: blur(60px);
 }
-
 @keyframes moveBg {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-  transform: translateY(-2px);
+/* SECTIONS */
+.section {
+  padding: 120px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  color: #1b53ff;
+  margin-bottom: 40px;
+  text-shadow: 0 0 8px rgba(27,83,255,0.6);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #120a2a;
+  color: #aaa;
 }
