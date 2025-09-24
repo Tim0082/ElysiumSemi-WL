@@ -1,61 +1,23 @@
-// Footer année auto
+// Met à jour l'année dans le footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Accordéon (Règlement)
-const headers = document.querySelectorAll(".accordion-header");
-headers.forEach(h => {
-  h.addEventListener("click", () => {
-    h.classList.toggle("active");
-    const content = h.nextElementSibling;
-    if (h.classList.contains("active")) {
-      content.style.maxHeight = content.scrollHeight + "px";
-      content.style.padding = "15px 20px";
-    } else {
-      content.style.maxHeight = null;
-      content.style.padding = "0 20px";
+// Active le bouton du menu selon la section visible
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(sec => {
+    const sectionTop = sec.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = sec.getAttribute("id");
     }
   });
-});
 
-// Patch Notes dynamiques
-const patchData = [
-  {
-    version: "v1.3.0",
-    date: "24/09/2025",
-    changes: [
-      "Ajout du choix et visuel des mappings",
-      "Ajout du choix et visuel des interactions joueurs",
-      "Mise à jour des permissions staff"
-    ]
-  },
-  {
-    version: "v1.2.0",
-    date: "15/09/2025",
-    changes: [
-      "Optimisation des performances",
-      "Nouvelles voitures d’auto-école"
-    ]
-  }
-];
-const patchList = document.getElementById("patch-list");
-patchData.forEach(p => {
-  const card = document.createElement("div");
-  card.className = "patch-card";
-  card.innerHTML = `<h3>${p.version} — ${p.date}</h3>` +
-    p.changes.map(c => `<p>• ${c}</p>`).join("");
-  patchList.appendChild(card);
-});
-
-// Staff dynamiques
-const staffData = [
-  { name: "Astro", role: "Fondateur" },
-  { name: "Shadoow", role: "Développeur" },
-  { name: "Maya", role: "Modératrice" }
-];
-const staffList = document.getElementById("staff-list");
-staffData.forEach(s => {
-  const card = document.createElement("div");
-  card.className = "staff-card";
-  card.innerHTML = `<h3>${s.name}</h3><p>${s.role}</p>`;
-  staffList.appendChild(card);
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
