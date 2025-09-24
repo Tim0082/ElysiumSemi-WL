@@ -7,33 +7,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Barre de navigation -->
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="logo">ELYSIUM</div>
+    <div class="status">
+      <span class="dot"></span>
+      <div>
+        <p class="online">EN LIGNE</p>
+        <p class="players">50 JOUEURS</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
   <nav class="navbar">
-    <div class="logo">Elysium</div>
-    <ul class="nav-links">
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#general">Général</a></li>
-      <li><a href="#reglement">Règlement</a></li>
-      <li><a href="#patch">Patch Note</a></li>
+    <ul>
+      <li><a href="#accueil">ACCUEIL</a></li>
+      <li><a href="#reglement">REGLEMENT</a></li>
+      <li><a href="#entreprises">ENTREPRISES</a></li>
+      <li><a href="#illegales">ILLEGAL</a></li>
+      <li><a href="#codepenal">CODE PENAL</a></li>
+      <li><a href="#candidature">CANDIDATURE</a></li>
+      <li><a href="#streamers">NOS STREAMERS</a></li>
+      <li><a href="#boutique">BOUTIQUE</a></li>
     </ul>
   </nav>
-
-  <!-- Section d'accueil -->
-  <section id="accueil" class="hero">
-    <div class="hero-content">
-      <h1>Bienvenue sur Elysium</h1>
-      <p>Nous sommes un serveur <strong>Semi-Whitelist</strong> orienté roleplay.</p>
-      <a href="https://discord.gg/elysium" target="_blank" class="btn">Rejoindre le Discord</a>
-    </div>
-  </section>
-
-  <script>
-    // Animation logo rotation au chargement
-    const logo = document.querySelector('.logo');
-    window.addEventListener('load', () => {
-      logo.classList.add('rotate');
-      setTimeout(() => logo.classList.remove('rotate'), 2000); // stop après 2s
-    });
-  </script>
 </body>
 </html>
