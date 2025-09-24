@@ -19,9 +19,10 @@ a { color: inherit; text-decoration: none; }
   top: 0; left: 0;
   width: 100%;
   z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 .logo {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
   color: #1b53ff;
   letter-spacing: 2px;
@@ -29,24 +30,21 @@ a { color: inherit; text-decoration: none; }
 }
 .navbar ul {
   display: flex;
-  gap: 25px;
   list-style: none;
+  gap: 25px;
 }
 .navbar a {
   font-weight: 600;
   position: relative;
+  padding: 6px 10px;
+  border-radius: 6px;
   transition: 0.3s;
 }
-.navbar a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px; left: 0;
-  width: 0%; height: 2px;
-  background: #1b53ff;
-  transition: width 0.3s;
+.navbar a:hover,
+.navbar a.active {
+  background: rgba(27,83,255,0.15);
+  color: #1b53ff;
 }
-.navbar a:hover { color: #1b53ff; }
-.navbar a:hover::after { width: 100%; }
 
 /* ==== HERO ==== */
 .hero {
@@ -59,17 +57,17 @@ a { color: inherit; text-decoration: none; }
 }
 .hero h1 {
   font-size: 3em;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .highlight {
   background: linear-gradient(90deg, #1b53ff, #4f7dff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero p {
+.subtitle {
   font-size: 1.2em;
   margin-bottom: 30px;
-  color: #ddd;
+  color: #bbb;
 }
 .btn {
   padding: 15px 30px;
@@ -84,60 +82,3 @@ a { color: inherit; text-decoration: none; }
   background: #4f7dff;
   transform: translateY(-2px);
 }
-
-/* ==== SECTIONS ==== */
-.section {
-  padding: 100px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-.section-title {
-  text-align: center;
-  font-size: 2em;
-  color: #1b53ff;
-  margin-bottom: 40px;
-  text-shadow: 0 0 8px rgba(27,83,255,0.6);
-}
-
-/* ==== ACCORDÉON ==== */
-.accordion-item { margin-bottom: 15px; border-radius: 8px; overflow: hidden; }
-.accordion-header {
-  padding: 15px 20px;
-  background: #061943;
-  cursor: pointer;
-  font-weight: bold;
-  border: none;
-  width: 100%;
-  text-align: left;
-  transition: background 0.3s;
-}
-.accordion-header:hover,
-.accordion-header.active {
-  background: #1b53ff;
-}
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  background: #0d1436;
-  padding: 0 20px;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-/* ==== PATCH NOTES ==== */
-.patch-grid {
-  display: grid;
-  gap: 20px;
-}
-.patch-card {
-  background: #061943;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(27,83,255,0.3);
-}
-.patch-card h3 {
-  margin-bottom: 10px;
-  color: #1b53ff;
-}
-
-/* ==== STAFF ==== */
-.staff-grid {
