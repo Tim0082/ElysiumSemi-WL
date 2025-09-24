@@ -1,105 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elysium — Serveur FiveM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <!-- Lien vers le style -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#top">
-        <img src="elysium-logo.png" alt="Logo Elysium" />
-        <span>Elysium</span>
-      </a>
-      <div class="spacer"></div>
-      <a class="btn" href="#rejoindre">Rejoindre</a>
-    </div>
+  <!-- Barre de navigation -->
+  <nav class="navbar">
+    <div class="logo">Elysium</div>
+    <ul class="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#general">Général</a></li>
+      <li><a href="#reglement">Règlement</a></li>
+      <li><a href="#patch">Patch Note</a></li>
+    </ul>
   </nav>
 
-  <!-- HERO -->
-  <header id="top" class="hero">
-    <div class="container hero-grid">
-      <div>
-        <img class="logo" src="elysium-logo.png" alt="Elysium" />
-        <p class="hero-blurb">Un serveur FiveM immersif et stable, au style bleu/noir.</p>
-        <div class="cta">
-          <a class="btn" id="joinBtn" href="#rejoindre">Rejoindre le serveur</a>
-          <a class="btn ghost" href="#patch">Voir les patch notes</a>
-        </div>
-      </div>
-      <div class="panel pad">
-        <h2 class="title">Infos serveur</h2>
-        <p class="subtitle">Aperçu rapide des features majeures.</p>
-        <div class="grid cols-2">
-          <div class="card"><h3>Auto-École</h3><p>Licences délivrées par un joueur.</p></div>
-          <div class="card"><h3>Interactions</h3><p>Choix et visuels retravaillés.</p></div>
-          <div class="card"><h3>Mappings</h3><p>Sélection optimisée et visuelle.</p></div>
-          <div class="card"><h3>Performances</h3><p>Scripts propres et rapides.</p></div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- PATCH NOTES -->
-  <section id="patch">
-    <div class="container">
-      <div class="panel pad">
-        <h2 class="title">Patch Notes</h2>
-        <p class="subtitle">Derniers changements publiés.</p>
-        <div class="grid cols-2">
-          <div class="card">
-            <h3>Nouveautés</h3>
-            <p>• Choix et visuel des mappings</p>
-            <p>• Choix et visuel des interactions joueurs</p>
-          </div>
-          <div class="card">
-            <h3>Discord & Staff</h3>
-            <p>• Ajustements Discord</p>
-            <p>• Mise à jour staff</p>
-          </div>
-        </div>
-      </div>
+  <!-- Section d'accueil -->
+  <section id="accueil" class="hero">
+    <div class="hero-content">
+      <h1>Bienvenue sur Elysium</h1>
+      <p>Nous sommes un serveur <strong>Semi-Whitelist</strong> orienté roleplay.</p>
+      <a href="https://discord.gg/elysium" target="_blank" class="btn">Rejoindre le Discord</a>
     </div>
   </section>
-
-  <!-- STAFF -->
-  <section id="staff">
-    <div class="container">
-      <div class="panel pad">
-        <h2 class="title">Staff</h2>
-        <div class="staff">
-          <div class="card"><h3>Astro</h3><p>Fondateur</p></div>
-          <div class="card"><h3>Shadoow</h3><p>Développeur</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REJOINDRE -->
-  <section id="rejoindre">
-    <div class="container">
-      <div class="panel pad">
-        <h2 class="title">Rejoindre le serveur</h2>
-        <div class="cta">
-          <a class="btn" href="https://discord.gg/elysium" target="_blank">Discord</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="foot">
-      <span>© <span id="year"></span> Elysium — Tous droits réservés</span>
-    </div>
-  </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Animation logo rotation au chargement
+    const logo = document.querySelector('.logo');
+    window.addEventListener('load', () => {
+      logo.classList.add('rotate');
+      setTimeout(() => logo.classList.remove('rotate'), 2000); // stop après 2s
+    });
   </script>
 </body>
 </html>
